@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://mp15lan5apk3"]
+
+[ext_resource type="Script" path="res://scripts/controller.gd" id="1_ldybj"]
+
+[node name="controller" type="Node"]
+script = ExtResource("1_ldybj")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3adxnmvr2hke"]
+
+[ext_resource type="Script" path="res://scripts/vertice.gd" id="1_xwpbx"]
+[ext_resource type="Texture2D" uid="uid://dw10tggwdy4wt" path="res://icon.svg" id="2_12tlx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uw6k3"]
+radius = 81.0987
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rcdov"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_12tlx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="vertice" type="Node"]
+script = ExtResource("1_xwpbx")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_uw6k3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D/CollisionShape2D"]
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_rcdov")
